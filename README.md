@@ -2,4 +2,4 @@
 
 
 Projeto de tipo simples de blog.<br>
-Acesse a página do projeto: [BloGroot](blogroot.herokuapp.com)
+Acesse a página do projeto: [BloGroot](http://blogroot.herokuapp.com)
