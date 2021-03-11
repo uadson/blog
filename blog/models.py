@@ -13,7 +13,9 @@ class Post(models.Model):
         - data de criacao da postagem 
         - data da publicação da postagem
     """
-    autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    autor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE
+        )
     titulo = models.CharField(max_length=200)
     texto = models.TextField()
     data_criacao = models.DateTimeField(default=timezone.now)
