@@ -3,12 +3,15 @@
 {% block content %}
 
 <div class="post">
+    
     {% if post.data_publicacao %}
     <div class="date">
         {{ post.data_publicacao }}
     </div>
     {% endif %}
+    <a class="btn btn-default" href="{% url 'blog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span> Editar</a>
     <h2>{{ post.titulo }}</h2>
     <p>{{ post.texto | linebreaksbr }}</p>
+
 </div>
 {% endblock %}
