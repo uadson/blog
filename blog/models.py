@@ -31,5 +31,5 @@ class Post(models.Model):
     def __str__(self):
         """Retorna uma string com o título da postagem
         """
-        return self.titulo
+        return f'{self.titulo}{self.autor}'
     
