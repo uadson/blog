@@ -23,7 +23,7 @@ class Post(models.Model):
 
     def publicar(self):
         """ Método que definirá uma data de publicação quando esta ação for
-        requesitada.
+        requisitada.
         """
         self.data_publicacao = timezone.now()
         self.save()
@@ -31,5 +31,5 @@ class Post(models.Model):
     def __str__(self):
         """Retorna uma string com o título da postagem
         """
-        return f'{self.titulo}{self.autor}'
+        return f'{self.titulo}'
     
