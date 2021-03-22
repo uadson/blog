@@ -63,3 +63,12 @@ def post_draft_list(request):
         '-data_criacao'
     )
     return render(request, 'blog/post_drafts_list.html', {'posts': posts})
+
+def post_publish(request, pk):
+    """Faz a publicação da postagem e redireciona para página de detalhes.
+    """
+    post = get_object_or_404(Post, pk = pk)
+
+    post.publicar()
+    
+    return redirect('blog:post_detail')
